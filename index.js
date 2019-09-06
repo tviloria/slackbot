@@ -50,7 +50,7 @@ function handleMessage(message) {
 
 
 function inspireMe() {
-    axios.get('https://raw.githubusercontent.com/BolajiAyodeji/inspireNuggets/master/src/quotes.json')
+    axios.get('https://raw.githubusercontent.com/tviloria/slackbot/master/elon-quotes.json')
       .then(res => {
             const quotes = res.data;
             const random = Math.floor(Math.random() * quotes.length);
