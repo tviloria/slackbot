@@ -17,7 +17,7 @@ bot.on('start', () => {
 
     bot.postMessageToUser(
         'tviloria',
-        'Get inspired mate',
+        'I am here to help',
         params
     );
 }),
@@ -34,8 +34,8 @@ bot.on('message', (data) => {
 })
 
 function handleMessage(message) {
-    if(message.includes(' inspire me')) {
-        inspireMe();
+    if(message.includes(' elon inspire me')) {
+        elon();
     }
 //    else if(message.includes(' random joke')) {
 //         randomJoke();
@@ -45,11 +45,10 @@ function handleMessage(message) {
 //     }
 }
 
-//function elon() 
-// use axios to get JSON data just like the inspireMe function 
 
 
-function inspireMe() {
+
+function elon() {
     axios.get('https://raw.githubusercontent.com/tviloria/slackbot/master/elon-quotes.json')
       .then(res => {
             const quotes = res.data;
@@ -69,3 +68,4 @@ function inspireMe() {
 
       })
 }
+
